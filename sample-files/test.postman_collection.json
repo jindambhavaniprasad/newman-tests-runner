@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "32e9757b-bb83-474a-9b74-03f1843e5c60",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sampleapis",
+						"com"
+					],
+					"path": [
+						"beers",
+						"ale"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

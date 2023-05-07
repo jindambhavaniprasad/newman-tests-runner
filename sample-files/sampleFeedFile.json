@@ -1,0 +1,7 @@
+{
+    "collections": [
+        "./Test.postman_collection.json"
+    ],
+    "environment": "./environment.json",
+    "iterations": 9
+}
