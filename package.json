@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Run Multiple Postman Collections and generate report in a single go.",
   "type": "module",
-  "main": "index.ts",
+  "main": "index.js",
   "bin": {
     "newman-tests-runner": "./bin/newman-tests-runner.js",
     "ntrun": "./bin/newman-tests-runner.js"
@@ -13,37 +13,18 @@
   },
   "keywords": [
     "newman",
-    "runner"
+    "runner",
+    "multiple-files"
   ],
   "author": "Bhavani Prasad Jindam",
   "license": "ISC",
   "dependencies": {
-    "@types/postman-collection": "^3.5.7",
-    "chalk": "^5.2.0",
-    "clear": "^0.1.0",
-    "figlet": "^1.6.0",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "newman": "^5.3.2",
     "newman-tests-runner": "^1.0.0",
     "path": "^0.12.7",
-    "postman-collection": "^4.1.7",
-    "rimraf": "^5.0.0",
-    "typescript-require": "^0.3.0",
     "yargs": "^17.7.2"
-  },
-  "devDependencies": {
-    "@types/clear": "^0.1.2",
-    "@types/figlet": "^1.5.6",
-    "@types/lodash": "^4.14.194",
-    "@types/newman": "^5.3.3",
-    "@types/node": "^20.1.0",
-    "@types/yargs": "^17.0.24",
-    "ts-node": "^10.9.1",
-    "tslib": "^2.5.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.4"
   },
   "repository": {
     "url": "https://github.com/jindambhavaniprasad/newman-tests-runner"

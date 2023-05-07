@@ -1,7 +1,7 @@
 {
     "collections": [
-        "./Test.postman_collection.json"
+        "./sample-files/test.postman_collection.json"
     ],
-    "environment": "./environment.json",
+    "environment": "./sample-files/environment.json",
     "iterations": 9
 }

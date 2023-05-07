@@ -1,39 +1,22 @@
 #!/usr/bin/env node
 
-import chalk from "chalk";
-import clear from "clear";
-import figlet from "figlet";
-import yargs from "yargs";
 import _ from "lodash";
-import NewmanConfig from "../lib/newmanconfig";
-import packageJson from "../package.json";
+import { createRequire } from "module";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+import NewmanConfig from "../lib/newmanconfig.js";
 
-clear();
-console.log(
-  chalk.rgb(
-    220,
-    120,
-    60
-  )(
-    figlet.textSync("Newman-Tests-Runner", {
-      font: "Doom",
-      horizontalLayout: "full",
-      whitespaceBreak: true,
-    })
-  )
-);
+const fileErrorMessage = "Please provide the relative path for feed file\n";
 
-const fileErrorMessage = chalk.red.bold("Please provide the relative path for feed file\n");
+const require = createRequire(import.meta.url);
+const packageJson = require("../package.json");
 
-const argumentOptions = yargs
+const argumentOptions = yargs(hideBin(process.argv))
   .scriptName("newman-tests-runner")
   .scriptName("ntrun")
   .usage("Usage: newman-tests-runner [args] or ntrun [args]")
   .option("f", { alias: "feed", describe: "Feed file path", type: "string" })
-  .option("v", {
-    alias: "version",
-    describe: "Current version for the newman-run package",
-  })
+  .version('v', "Current version for the newman-tests-runner package", packageJson.version)
   .check((argv) => {
     if (_.isEmpty(argv.f)) {
       console.log(fileErrorMessage);
@@ -44,10 +27,6 @@ const argumentOptions = yargs
   }).argv;
 
 const NC = new NewmanConfig();
-
-if (argumentOptions["v"]) {
-  console.log(packageJson.version);
-}
 
 if (!_.isEmpty(argumentOptions["f"])) {
   NC.runFeedFile(argumentOptions["f"]);
