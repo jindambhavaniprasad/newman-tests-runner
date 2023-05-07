@@ -1,4 +1,5 @@
 ## Run multiple postman collections tests with itearations and environment data
+### A command line tool to run multiple postman collections using newman
 
 ----
 
