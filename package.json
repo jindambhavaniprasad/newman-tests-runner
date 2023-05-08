@@ -14,7 +14,9 @@
   "keywords": [
     "newman",
     "runner",
-    "multiple-files"
+    "multiple-files",
+    "ntrun",
+    "newman-tests-runner"
   ],
   "author": "Bhavani Prasad Jindam",
   "license": "ISC",
