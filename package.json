@@ -21,10 +21,11 @@
   "author": "Bhavani Prasad Jindam",
   "license": "ISC",
   "dependencies": {
-    "fs": "^0.0.1-security",
+    "console-log-colors": "^0.4.0",
     "lodash": "^4.17.21",
     "newman": "^5.3.2",
-    "path": "^0.12.7",
+    "newman-reporter-htmlextra": "^1.22.11",
+    "postman-collection": "^4.1.7",
     "yargs": "^17.7.2"
   },
   "repository": {

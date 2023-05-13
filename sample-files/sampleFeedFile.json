@@ -3,5 +3,7 @@
         "./sample-files/test.postman_collection.json"
     ],
     "environment": "./sample-files/environment.json",
-    "iterations": 9
+    "iterations": 1,
+    "appName": "MyTestApp",
+    "reporters": ["cli", "htmlextra"]
 }

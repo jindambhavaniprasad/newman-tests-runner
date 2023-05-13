@@ -12,11 +12,13 @@ newman-tests-runner -f <feed file path> (or) ntrun -f <feed file path>
 
 Example of feed file:-
  ```
- {
+{
     "collections": [
-        "./test.postman_collection.json"
+        "./sample-files/test.postman_collection.json"
     ],
-    "environment": "./environment.json",
-    "iterations": 9
+    "environment": "./sample-files/environment.json",
+    "iterations": 1,
+    "appName": "MyTestApp", //App Name To Be Reflected In Report
+    "reporters": ["cli", "htmlextra"] // Currently only 2 reports cli and htmlextra are supported
 }
  ```
