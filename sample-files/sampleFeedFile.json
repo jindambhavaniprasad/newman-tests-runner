@@ -5,5 +5,6 @@
     "environment": "./sample-files/environment.json",
     "iterations": 1,
     "appName": "MyTestApp",
-    "reporters": ["cli", "htmlextra"]
+    "reporters": ["cli", "htmlextra"],
+    "reportPath": "./newman-report/"
 }

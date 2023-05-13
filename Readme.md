@@ -19,6 +19,11 @@ Example of feed file:-
     "environment": "./sample-files/environment.json",
     "iterations": 1,
     "appName": "MyTestApp", //App Name To Be Reflected In Report
-    "reporters": ["cli", "htmlextra"] // Currently only 2 reports cli and htmlextra are supported
+    "reporters": ["cli", "htmlextra"] // Currently only 2 reports cli and htmlextra are supported,
+    "reportPath": "./newman-report/" //Path for the report to be generated (relative or complete path)
 }
  ```
+
+----
+
+ ### Need help for running collections through multiple environment files and generate a single report
